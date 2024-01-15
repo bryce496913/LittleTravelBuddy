@@ -1,3 +1,13 @@
+<!-- res/values/strings.xml -->
+
 <resources>
-    <string name="app_name">Little Travel Buddy</string>
+    <string name="app_name">LittleTravelBuddy</string>
+
+    <!-- Button Content Descriptions -->
+    <string name="new_journal_description">New Journal</string>
+    <string name="journal_entries_description">Journal Entries</string>
+    <string name="flight_tracker_description">Flight Tracker</string>
+    <string name="currency_converter_description">Currency Converter</string>
+    <string name="search_description">Search</string>
+    <string name="profile_description">Profile</string>
 </resources>

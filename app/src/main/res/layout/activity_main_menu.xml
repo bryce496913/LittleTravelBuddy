@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    tools:context=".MainMenuActivity">
+
+    <!-- New Journal Button -->
+    <ImageButton
+        android:id="@+id/btnNewJournal"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginRight="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/new_journal_description"
+        android:onClick="navigateToNewJournal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/new_journal" />
+
+    <!-- Journal Entries Button -->
+    <ImageButton
+        android:id="@+id/btnJournalEntries"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/journal_entries_description"
+        android:onClick="navigateToJournalEntries"
+        android:scaleType="fitCenter"
+        android:src="@drawable/journal_entries" />
+
+    <!-- Flight Tracker Button -->
+    <ImageButton
+        android:id="@+id/btnFlightTracker"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/flight_tracker_description"
+        android:onClick="navigateToFlightTracker"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flight_tracker" />
+
+    <!-- Currency Converter Button -->
+    <ImageButton
+        android:id="@+id/btnCurrencyConverter"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/currency_converter_description"
+        android:onClick="navigateToCurrencyConverter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/currency_converter" />
+
+    <!-- Search Button -->
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/search_description"
+        android:onClick="navigateToSearch"
+        android:scaleType="fitCenter"
+        android:src="@drawable/search" />
+
+    <!-- Profile Button -->
+    <ImageButton
+        android:id="@+id/btnProfile"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/profile_description"
+        android:onClick="navigateToProfile"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile" />
+
+</GridLayout>
