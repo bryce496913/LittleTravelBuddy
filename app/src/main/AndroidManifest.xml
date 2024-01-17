@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.littletravelbuddy">
+
+    <!-- Add these permissions for camera and gallery access -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +23,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LittleTravelBuddy"
-        tools:targetApi="31" />
+        tools:targetApi="34">
 
+        <!-- Splash Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LittleTravelBuddy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Menu Activity -->
+        <activity
+            android:name=".MainMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LittleTravelBuddy" />
+
+        <!-- New Journal Activity -->
+        <activity
+            android:name=".NewJournalActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LittleTravelBuddy" />
+
+        <!-- Currency ConverterActivity Activity -->
+        <activity
+            android:name=".CurrencyConverterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LittleTravelBuddy" />
+
+        <!-- Other Activities
+        <activity android:name=".JournalEntriesActivity" />
+        <activity android:name=".FlightTrackerActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ProfileActivity" />-->
+
+    </application>
 </manifest>

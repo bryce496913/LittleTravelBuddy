@@ -1,92 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Destination Input -->
-    <EditText
-        android:id="@+id/etDestination"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Destination"
-        android:inputType="text" />
-
-    <!-- Date Input -->
-    <EditText
-        android:id="@+id/etDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date"
-        android:inputType="date" />
-
-    <!-- Rich Text Area for Notes -->
-    <EditText
-        android:id="@+id/etNotes"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="Notes"
-        android:inputType="textMultiLine" />
-
-    <!-- Media Attachment Section -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Media Attachment"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:paddingTop="16dp" />
-
-    <!-- Buttons for Camera and Gallery -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Destination -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destination:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter destination"
+            android:inputType="text" />
+
+        <!-- Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter notes"
+            android:inputType="textMultiLine"
+            android:lines="5" />
+
+        <!-- Photos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photos:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/ivPhotos"
+            android:layout_width="381dp"
+            android:layout_height="138dp"
+            android:contentDescription="Photos"
+            android:scaleType="fitCenter"
+            android:src="@drawable/placeholder_image" />
+
+        <!-- Capture Photo -->
         <Button
             android:id="@+id/btnCapturePhoto"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Capture Photo"
-            android:onClick="capturePhoto" />
+            android:layout_marginTop="16dp" />
 
+        <!-- Select Photo -->
         <Button
-            android:id="@+id/btnSelectFromGallery"
-            android:layout_width="0dp"
+            android:id="@+id/btnSelectPhoto"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Select from Gallery"
-            android:onClick="selectFromGallery" />
+            android:text="Select Photo"
+            android:layout_marginTop="8dp" />
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter location"
+            android:inputType="text" />
+
+        <!-- Map -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp">
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
 
     </LinearLayout>
-
-    <!-- Map Display Section -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Location"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:paddingTop="16dp" />
-
-    <!-- Map Display Placeholder (You'll integrate the map here) -->
-    <FrameLayout
-        android:id="@+id/mapContainer"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#e0e0e0"
-        android:padding="8dp" />
-
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Entry"
-        android:onClick="saveJournalEntry"
-        android:layout_marginTop="16dp" />
-
-</LinearLayout>
+</ScrollView>

@@ -1,41 +1,41 @@
-// MainMenuActivity.kt
-
 package com.example.littletravelbuddy
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-//import kotlinx.android.synthetic.main.activity_main_menu.*
+import com.example.littletravelbuddy.databinding.ActivityMainMenuBinding
 
 class MainMenuActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainMenuBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_menu)
+        binding = ActivityMainMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Set click listeners for each button
-        findViewById<View>(R.id.btnNewJournal).setOnClickListener {
+        binding.btnNewJournal.setOnClickListener {
             navigateToActivity(NewJournalActivity::class.java)
         }
 
-        findViewById<View>(R.id.btnJournalEntries).setOnClickListener {
+        binding.btnJournalEntries.setOnClickListener {
             navigateToActivity(JournalEntriesActivity::class.java)
         }
 
-        findViewById<View>(R.id.btnFlightTracker).setOnClickListener {
+        binding.btnFlightTracker.setOnClickListener {
             navigateToActivity(FlightTrackerActivity::class.java)
         }
 
-        findViewById<View>(R.id.btnCurrencyConverter).setOnClickListener {
+        binding.btnCurrencyConverter.setOnClickListener {
             navigateToActivity(CurrencyConverterActivity::class.java)
         }
 
-        findViewById<View>(R.id.btnSearch).setOnClickListener {
+        binding.btnSearch.setOnClickListener {
             navigateToActivity(SearchActivity::class.java)
         }
 
-        findViewById<View>(R.id.btnProfile).setOnClickListener {
+        binding.btnProfile.setOnClickListener {
             navigateToActivity(ProfileActivity::class.java)
         }
     }

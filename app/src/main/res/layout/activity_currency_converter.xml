@@ -1,0 +1,74 @@
+<!-- res/layout/activity_currency_converter.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textConvertFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert from:"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerConvertFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textConvertFrom"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textConvertTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert to:"
+        android:layout_below="@id/spinnerConvertFrom"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerConvertTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textConvertTo"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount:"
+        android:layout_below="@id/spinnerConvertTo"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/textAmount"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@id/editTextAmount"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results:"
+        android:layout_below="@id/btnConvert"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textConvertedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textResults"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
