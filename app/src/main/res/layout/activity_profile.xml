@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Square profile picture top and center -->
+
+        <!-- Title: Name -->
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="201dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text box for the user to enter name -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:inputType="text"/>
+
+        <!-- Title: Address -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text box for Street -->
+        <EditText
+            android:id="@+id/editTextStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Street"
+            android:inputType="text"/>
+
+        <!-- Text box for City -->
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:inputType="text"/>
+
+        <!-- Spinner for State -->
+        <Spinner
+            android:id="@+id/spinnerState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Text box for ZIP Code -->
+        <EditText
+            android:id="@+id/editTextZIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ZIP Code"
+            android:inputType="number"/>
+
+        <!-- Text box for Country -->
+        <EditText
+            android:id="@+id/editTextCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country"
+            android:inputType="text"/>
+
+        <!-- Title: Passport Number -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Passport Number"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text box for user to enter passport number -->
+        <EditText
+            android:id="@+id/editTextPassportNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your passport number"
+            android:inputType="text"/>
+
+        <!-- Title: Frequent Flyer Number -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frequent Flyer Number"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text box for airline name -->
+        <EditText
+            android:id="@+id/editTextAirlineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter airline name"
+            android:inputType="text"/>
+
+        <!-- Text box for frequent flyer number -->
+        <EditText
+            android:id="@+id/editTextFrequentFlyerNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter frequent flyer number"
+            android:inputType="text"/>
+
+        <!-- Title: Spoken Languages -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spoken Languages"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Text area for the user to list the different languages they speak / read -->
+        <EditText
+            android:id="@+id/editTextSpokenLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="List your spoken languages"
+            android:inputType="textMultiLine"
+            android:minLines="3"/>
+
+        <!-- Title: Emergency Contact -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emergency Contact"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Title: Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16sp"/>
+
+        <!-- Text box for user to enter emergency contact name -->
+        <EditText
+            android:id="@+id/editTextEmergencyContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter emergency contact name"
+            android:inputType="text"/>
+
+        <!-- Title: Contact Number -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Number"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Number input box for country code -->
+        <EditText
+            android:id="@+id/editTextCountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country Code"
+            android:inputType="number"/>
+
+        <!-- Number input box for phone number -->
+        <EditText
+            android:id="@+id/editTextContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter contact number"
+            android:inputType="number"/>
+
+        <!-- Button: Save -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
